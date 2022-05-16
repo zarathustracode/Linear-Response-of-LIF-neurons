@@ -8,7 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(PythonInterp 3 REQUIRED)
 find_package(PythonLibs 3 REQUIRED)
 find_package(Boost 1.7 REQUIRED python numpy)
-find_package (Eigen3 REQUIRED)
+#find_package (Eigen3 REQUIRED)
 
 message("-- Python3 inlcudes ${PYTHON_INCLUDE_DIRS}")
 
@@ -19,14 +19,14 @@ message("-- Boost inlcudes ${Boost_INCLUDE_DIR}")
 message("-- Boost libraries ${Boost_LIBRARIES}")
 
 
-IF( NOT EIGEN3_INCLUDE_DIR )
-    message("There is not Eigen3. Setting it manualy")
-    SET( EIGEN3_INCLUDE_DIR "/usr/include/eigen3" )
-ENDIF()
+#IF( NOT EIGEN3_INCLUDE_DIR )
+#    message("There is not Eigen3. Setting it manualy")
+#    SET( EIGEN3_INCLUDE_DIR "/usr/include/eigen3" )
+#ENDIF()
 
-message("-- Eigen3 include: ${EIGEN3_INCLUDE_DIR}")
+#message("-- Eigen3 include: ${EIGEN3_INCLUDE_DIR}")
 
-include_directories(${Boost_INCLUDE_DIR} ${PYTHON_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIR})
+include_directories(${Boost_INCLUDE_DIR} ${PYTHON_INCLUDE_DIRS}) #${EIGEN3_INCLUDE_DIR}
 link_directories("/usr/local/lib") # I had to do this on ubuntu for some reason
 
 add_library(LIF0 SHARED LIF0.cpp)

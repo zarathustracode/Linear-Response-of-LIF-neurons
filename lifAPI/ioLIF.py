@@ -2,9 +2,9 @@ import numpy as np
 from numpy import exp, pi
 from numpy import sqrt
 from scipy.special import erfcx
-from LIF0 import lif1py as LIFc
-from LIF0 import lifResponsepy as LIFr
-from LIF0 import getSolutionpy as frt
+from .LIF0 import lif1py as LIFc
+from .LIF0 import lifResponsepy as LIFr
+from .LIF0 import getSolutionpy as frt
 from scipy.integrate import quad, odeint
 
 

@@ -1,7 +1,7 @@
 
 from fastapi import FastAPI
-from SynapticCurrent import Current, NeuronalResponse
-from ioLIF import *
+from .SynapticCurrent import Current, NeuronalResponse
+from .ioLIF import *
 
 app = FastAPI(
         title="Leaky integrate-and-fire neurons API",
