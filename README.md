@@ -12,7 +12,7 @@ To start the app run
 
 To create docker container run
 
-`docker build -t leaky-integrate-and-fire:0.1`
+`docker build -t leaky-integrate-and-fire:0.1 .`
 
  and to run it
 
